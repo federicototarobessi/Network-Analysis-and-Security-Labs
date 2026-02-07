@@ -4,8 +4,7 @@ Tools used: VM, Wireshark, Nmap, CyberChef
 Methodology:
 1.	Nmap Scans - Identifying the most common Nmap scans: TCP connect scans, SYN scans and UDP scans.
 -	To find the total number of TCP Connect scans:
- <img width="494" height="113" alt="Image" src="https://github.com/user-attachments/assets/013ff0f8-ce8f-4f58-8eba-8af3bd9fde70" />
-It means that it is the amount of bytes of data the host can send before the receiver will send an acknowledgement. If the host receives an acknowledgement, the window size will increase. If the host does not receive an acknowledgement from the receiver, the window size will decrease.
+  It means that it is the amount of bytes of data the host can send before the receiver will send an acknowledgement. If the host receives an acknowledgement, the window size will increase. If the host does not receive an acknowledgement from the receiver, the window size will decrease.
 -	To find how many UDP close port messages there are:
  
 Type 3 means that the destination is unreachable while code 3 means the port is unreachable.
