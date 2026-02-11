@@ -1,0 +1,9 @@
+Nmap: Basic Port Scans
+Activity description: This activity focused on performing network discovery and security auditing using Nmap to map a target's attack surface. I conducted various scanning techniques, including SYN scans and UDP scans, to identify open ports and active services. By analyzing the responses from the target, I was able to determine the state of network ports (open, closed, or filtered) and identify the specific versions of running services. This process involved balancing scanning speed with stealth to understand how network security measures, such as firewalls, react to different types of probes.
+Tools used: Nmap (Network Mapper); Linux Terminal (Attack box), Target VM (TryHackMe Lab Environment)
+Methodology:
+1.	TCP and UDP Ports/TCP flags – Learned about Nmap’s six port states: Open; Closed; Filtered; Unfiltered; Open|Filtered; Closed|Filtered. Also, I learned the different TCP header flags.
+2.	TCP Connect Scan/TCP SYN Scan – Performed a TCP port scan by running the command “nmap -sT IP Address”. Privileged users can avoid completing a 3-way handshake. Instead, it tears down the connection once it receives a response from the server. Because we didn’t establish a TCP connection, this decreases the chances of the scan being logged. We can select this scan type by using the “-sS” option.
+3.	UDP Scan - UDP is a connectionless protocol, and hence it does not require any handshake for connection establishment. We cannot guarantee that a service listening on a UDP port would respond to our packets. However, if a UDP packet is sent to a closed port, an ICMP port unreachable error (type 3, code 3) is returned. You can select UDP scan using the “-sU” option.
+Lessons Learned: I gained a deep understanding of the TCP three-way handshake and how different Nmap flags manipulate this process to elicit specific responses from a host. I learned to interpret ICMP error codes to identify closed UDP ports.
+
