@@ -1,0 +1,12 @@
+Wireshark: Packet Operations
+
+Activity description: This laboratory focuses on advanced packet manipulation and analysis. The objective was to master the use of statistical tools to gain a high-level overview of network traffic and to apply complex filtering principles to isolate specific communication strings.
+
+Tools used: Wireshark Packet Analyser, Virtual Machine (VM) Environment, Network Traffic Captures (.pcap files).
+
+Methodology:
+1. Statistics and Network Overview I utilized the Statistics menu to analyze the overall scope of the capture. This included investigating Protocol Hierarchy, Endpoints, and Conversations to identify the most active participants in the network. I specifically practiced investigating IP addresses, DNS packets, and identifying frequent HTTP requests.
+2. Advanced Packet Filtering I practiced the syntax for both Capture Filters and Display Filters. Using the Display Filter Expression builder, I created complex filters combining comparison and logical operators. Key tasks included filtering traffic by TTL values, specific port numbers, and isolating packets based on layered protocol criteria.
+3. Protocol Analysis The activity involved uncovering specific details within protocols by applying advanced filters to see the "big picture" of a conversation, allowing for the correlation of disparate packets into a single logical stream of data.
+
+Lessons Learned I learned how to use the statistics menu to quickly identify anomalies in traffic volume and protocol distribution. I mastered the use of logical operators to build advanced display filters, significantly reducing the time required to find specific data points. Additionally, I improved my ability to navigate complex conversations by understanding the relationship between endpoints and their requested services.
