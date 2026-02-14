@@ -1,0 +1,17 @@
+Snort
+
+Activity description: In this exercise, I utilized Snort, an open-source, rule-based Network Intrusion Detection and Prevention System (NIDS/NIPS), within a Linux virtual machine environment. The activity involved configuring Snort across four primary operational modes—Sniffer, Packet Logger, IDS/IPS, and PCAP Investigation—to monitor live traffic and analyze historical data captures.
+
+Tools used: Linux, Virtual Machine, Snort
+
+Methodology:
+1.	Introduction to IDS/IPS – Learned about the differences between IDS and IPS, and the three main detection/prevention techniques. Moreover, I was introduced to Snort, an open-source, rule-based Network Intrusion Detection and Prevention System (NIDS/NIPS).
+2.	Operation Mode 1: Sniffer Mode – Learned that, like tcpdump, Snort has various flags that allow for viewing different data about the packet it is ingesting: “-v”; “-d”; “-e”; “-X”; “-i”.
+3.	Operation Mode 2: Packet Logger Mode – Learned that you can use Snort as a sniffer and log the sniffed packets via logger mode. Investigated the traffic  with ASCII mode to find the source port of a determined port; read the log file with different parameter in order to find the data that the exercise required (-n, -X) and used BPF filter to target one specific TCP port.
+4.	Operation Mode 3: IDS/IPS - In IDS/IPS mode, Snort moves beyond simple sniffing to active traffic management by applying user-defined rules and configurations. By utilizing various flags like -A for specific alert styles (console, cmg, full) or -Q for inline packet dropping, you can customize how the system responds to and logs potential threats.
+5.	Operation Mode 4: PCAP Investigation – Learned how to use Snort’s PCAP read/investigate mode using different parameters, like “-r” to investigate a single parameter, or using “—pcap-list” to analyse two or more files at the same time. 
+6.	Snort Rule Structure – Learned the primary structure of a Snort rule and about the General, Payload and Non-Payload rules options. Wrote several rules to practice the different types of filters and gained confidence dealing with local.rules type of file.
+
+Lessons Learned: Through this module, I gained a comprehensive understanding of the transition from passive packet sniffing to active traffic management by mastering various flags for deep packet inspection and logging traffic in both ASCII and binary formats. I developed practical skills in rule engineering by writing custom filters in the local.rules file and exploring the primary structure of Snort’s General, Payload, and Non-Payload options. Finally, I learned to perform forensic analysis using PCAP investigation mode to process historical data and implemented IDS/IPS functions to manage live traffic through user-defined rules and inline packet dropping.
+
+
