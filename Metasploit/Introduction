@@ -1,0 +1,19 @@
+Metasploit: Introduction
+
+Activity description: Metasploit is the most widely used exploitation framework. Metasploit is a powerful tool that can support all phases of a penetration testing engagement, from information gathering to post-exploitation. I covered the main components of Metasploit while gaining a solid foundation on how to find relevant exploits, set parameters, and exploit vulnerable services on the target system.
+
+Tools used: Linux, Metasploit, msfconsole
+
+Methodology: The framework is organized into specific modules and categories to streamline the hacking process. 
+Key components include:
+•	Exploits: Code sequences designed to take advantage of a specific vulnerability in a target application or system.
+•	Payloads: The actual code that runs on the target system after a successful exploit, such as opening a remote shell.
+•	Auxiliary Modules: Tools used for scanning, sniffing, and information gathering without necessarily exploiting a system.
+•	Post-Exploitation Modules: Used to gather further information or maintain persistence after the initial breach.
+•	Encoders: Tools used to modify the payload to help it evade detection by antivirus or security software.
+
+Lessons Learned: 
+•	Phase Support: Learned that Metasploit is a versatile tool that helps with different parts of a penetration test, starting from gathering information all the way to what happens after an exploit is successful.
+•	Module Navigation: Gained a basic understanding of how the framework is organized into different modules and categories.
+•	Basic Exploit Steps: Learned the simple process of finding an exploit, filling in the required settings, and trying it out on a target system.
+•	Hands-on Practice: Developed a starting foundation for identifying vulnerable services and seeing how they can be accessed using the framework.
