@@ -1,0 +1,16 @@
+Activity description: I conducted a Nessus network discovery scan to validate the environment against unauthorized 'Shadow IT' and rogue device connectivity. Beyond asset verification, this provided critical visibility into the active IP space and open port configurations, establishing a baseline for vulnerability management and simulated adversarial testing.
+
+Tools used: For this task, I used a lab environment consisting of several key tools:
+•	Kali Linux: Used as the primary platform for running the audit.
+•	Nessus: The central tool used for the discovery and port scanning.
+•	Target Machines: I used Metasploitable 2 and 3 as my targets to simulate vulnerable systems.
+•	Infrastructure: The environment was managed through Oracle VM, with a PfSense firewall acting as the gateway.
+
+Methodology: To start, I used the “Host Discovery” feature within Nessus. After defining the target network range, I opted for a Port Scan of common ports rather than a simple "ping". This provided more detail on exactly what services were running on the machines I found.
+The scan successfully identified several active components:
+•	The PfSense gateway.
+•	My Kali Linux machine (identified by its management port, 8834).
+•	Both Metasploitable instances, including a full list of their open ports.
+In a real-world scenario, if a "fifth line" or an unrecognized device appeared in these results, it would be flagged immediately as a potential external threat and investigated.
+
+Lessons Learned: Through this exercise I was able to get hands-on experience with Nessus and the Metasplotable framework. I learned how to conduct a network discovery scan and how to spot the difference between what belongs on the network and what doesn’t.
