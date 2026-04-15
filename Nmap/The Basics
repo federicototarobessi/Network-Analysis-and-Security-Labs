@@ -1,0 +1,15 @@
+Activity description: This laboratory provides a foundational introduction to Nmap, one of the most powerful tools in a security practitioner’s arsenal. 
+The focus was on understanding how Nmap manages network scanning, from specifying targets and defining port ranges to choosing between various scanning speeds and intensities.
+
+Tools used: Nmap (Network Mapper); Linux Terminal (Attack box), Target VM (TryHackMe Lab Environment)
+
+Methodology: 
+•	Specifying Targets: Learned the various ways to define which hosts to scan. This includes scanning a single IP, a list of IPs, a range of IPs (e.g., 10.10.0.1-50), or an entire subnet using CIDR notation (e.g., 10.10.10.0/24).
+•	Port Selection: Explored how to control which ports Nmap probes to save time. Using the -p flag, I can scan a specific port (-p 80), a list of ports (-p 22,80,443), or a range of ports (-p 1-1024). 
+Alternatively, the -F flag (Fast mode) allows for scanning only the 100 most common ports.
+•	Scanning Strategy: Understood that Nmap’s default behaviour is to scan the 1,000 most common TCP ports. By using --top-ports, I can specifically target the most frequent ports based on Nmap's internal database.
+•	Timing and Performance: Learned how to adjust the timing templates using -T<0-5>. While -T4 is often used for a balance of speed and reliability on modern networks, -T0 and -T1 are useful for avoiding detection or dealing with fragile network links.
+•	Nmap Switches: Discovered essential flags for controlling the scan process, such as -v for increased verbosity to see results in real-time as they are discovered.
+
+Lessons Learned: I mastered the fundamental command structure of Nmap, gaining the ability to efficiently define scan targets and prioritize port ranges to map an attack surface. 
+I also learned to balance scanning speed with stealth by utilizing timing templates and verbosity flags, ensuring that I can gather critical network data while remaining mindful of network stability and security monitoring.
