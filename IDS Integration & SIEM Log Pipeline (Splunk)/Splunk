@@ -21,3 +21,6 @@ Lessons Learned
 Log Reliability: I learned that standard Linux pipes can cause delays (buffering) in security monitoring. Using stdbuf is critical in a SOC environment to ensure "Real-Time" actually means real-time.
 
 Data Structure: I gained experience in metadata management by defining custom sourcetypes in Splunk, which is essential for creating organized dashboards and automated alerts in a professional SIEM environment.
+
+![Splunk Alerts](Splunk.png)
+![Snort terminal](Snort.png)
