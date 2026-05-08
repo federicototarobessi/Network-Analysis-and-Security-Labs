@@ -1,0 +1,23 @@
+Activity Description
+I implemented a real-time Intrusion Detection System (IDS) using Snort 3 and integrated it with Splunk (SIEM) to achieve centralized security monitoring. 
+This project involved configuring a detection engine to identify specific network patterns and building a custom data pipeline to ensure high-fidelity alerts were ingested into the SIEM for analysis.
+
+Tools Used
+Snort 3 (Snort++): Used as the modern, multi-threaded detection engine to monitor network traffic.
+Splunk Enterprise: Utilized as the SIEM platform for log ingestion, indexing, and data visualization.
+Kali Linux: The underlying OS used to host the tools and manage the Linux file system.
+Bash / Linux CLI: Employed for advanced process management, I/O redirection, and buffer control.
+
+Methodology
+Signature Creation: I authored a custom Snort rule (local.rules) designed to detect ICMP (Ping) traffic as a baseline for signature verification.
+
+Detection Configuration: I configured Snort 3 to monitor the loopback interface (lo) in "Alert Fast" mode to generate standardized security event text.
+
+Pipeline Engineering: To bridge the gap between Snort’s output and Splunk, I engineered a "Super Pipe" using stdbuf and tee. This was necessary to bypass Linux I/O buffering, ensuring that alerts were written to the /var/log/snort/alert file the exact millisecond they occurred.
+
+SIEM Ingestion: I configured a Splunk Data Input to "tail" the alert file, assigning a custom sourcetype (snort_alerts) to allow for structured searching and field extraction.
+
+Lessons Learned
+Log Reliability: I learned that standard Linux pipes can cause delays (buffering) in security monitoring. Using stdbuf is critical in a SOC environment to ensure "Real-Time" actually means real-time.
+
+Data Structure: I gained experience in metadata management by defining custom sourcetypes in Splunk, which is essential for creating organized dashboards and automated alerts in a professional SIEM environment.
